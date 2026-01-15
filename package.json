@@ -1,6 +1,7 @@
 {
+    "type": "module",
     "dependencies": {
         "express": "^5.2.1",
-        "type": "module"
+        "zod": "^4.3.5"
     }
 }
