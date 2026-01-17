@@ -8,7 +8,7 @@ const app = express(); //app is the instence of express
 app.get('/', (req, res) => {
     //we have to send a file to express server;
     const dirPath = import.meta.dirname; //like __dirname in node js
-    const filePath = import.meta.url; //like __filename in node js
+    // const filePath = import.meta.url; //like __filename in node js
 
     const homepagePath = path.join(dirPath, "public", "index.html"); //we have to send file's absolute path here;
 
