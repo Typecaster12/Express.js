@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 //middleware;
+//Middleware is a function that runs between the request and the response.
 //this is the way to render static files(more than one, togeather);
 app.use(express.static(path.join(__dirname, "StaticFiles")));
 
