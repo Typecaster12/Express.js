@@ -13,7 +13,8 @@ server.get("/", (req, res) => {
 });
 
 server.get("/report", (req, res) => {
-    res.render("report");
+    // res.render("report", { marks: 100 }); //for the escaped one;
+    res.render("report", { content: '<strong> This is the dynamic html </strong>' }); //for the escaped one;
 });
 
 server.listen(3000, () => {
