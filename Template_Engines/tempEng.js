@@ -1,8 +1,5 @@
 import express from 'express';
-
 const server = express();
-
-
 //what you are using => view engine
 //what is the library you are using for that like => ejs, pug etc..
 server.set("view engine", "ejs");
