@@ -1,0 +1,28 @@
+Auth,
+    1. validation
+        to check if the data is in correct formate
+
+    2. verification;
+        to check(verify) is the data is correct or not(here we check data, not its formate);
+        eg => if the user entered the email, is it correct() or not?, like password of id
+        we can verify by using otp method;
+
+    3. Authentication;
+        to identify, from which user the coming request is..
+
+    4. Autherisation;
+        the permisions to the user is basically Autherization;
+        eg => admin can access all the page, students can access only that pages were data is shown not the complete system
+
+
+# How JWT works(token based AUTH system);
+USER ------------>------>---{resgister request(first request)}---->--------SERVER
+    here user makes a reg request along with their details, Server takes the details and create a token based on that details and send back to the user along with response;
+
+SERVER ------------->--------(response + token)-------->------------->-------USER
+    now next when ever user wants to make a request, server authenticate that user based on the token user will send along with their request
+
+this is how token based AUTH WORKS..
+
+
+Note=> server never stores the token, website asks browser to store the token in the form of cookies
