@@ -5,6 +5,18 @@ export const registerUser = async (req, res) => {
     try {
         const { userName, userMail, userPass } = req.body;
 
+        //since we have applied a uniqueness in our email  
+        //but backend's error, we cant simply just paste them in our frontend due to security reasons;
+        //so we will generate here a custome error by finding that user;
+        const isUserAlreadyExists = await userModel.findOne({
+            userMail
+        });
+
+        if (isUserAlreadyExists) {
+            return res.status(409).json({
+                message: "User Already exists laudeki..."
+            })
+        }
         const user = await userModel.create({
             userName, userMail, userPass
         });
